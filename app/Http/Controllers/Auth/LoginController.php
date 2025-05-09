@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('auth.login');
+         return view('auth.login');
     }
 
     public function login(Request $request)
@@ -24,7 +24,7 @@ class LoginController extends Controller
             'password' => $credentials['password'],
         ])) {
             $request->session()->regenerate();
-            return redirect()->intended('/inicio');
+            return redirect()->intended('/menu');
         }
 
         return back()
