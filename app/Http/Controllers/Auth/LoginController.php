@@ -15,7 +15,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'dni'      => ['required', 'numeric'],
+            'dni'      => ['required', 'numeric', 'min:8'],
             'password' => ['required'],
         ]);
 

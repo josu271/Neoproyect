@@ -2,9 +2,12 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;  // <-- importar
 
 class Empleado extends Authenticatable
 {
+    use HasFactory;  // <-- incluir
+
     protected $table = 'empleado';
     protected $primaryKey = 'idEmpleado';
     public $timestamps = false;
